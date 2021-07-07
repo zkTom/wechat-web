@@ -1,0 +1,48 @@
+/** 按钮公共样式 */
+.btn {
+	line-height: 1.2;
+	white-space: nowrap;
+	cursor: pointer;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: none;
+	border-radius: 5px;
+    color: #606266;
+    display: inline-block;
+	text-align: center;
+	outline: none;
+	margin: 0;
+    transition: .1s;
+    font-size: 18px;
+	font-weight: 400;
+    height: 50px;
+    font-family: 'PingFangSC-Semibold', 'PingFang SC', 'Helvetica Neue', Helvetica, 'microsoft yahei', arial,
+                STHeiTi, sans-serif;
+}
+.btn--large {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+}
+.btn--normal {
+    padding: 0 15px;
+    font-size: 14px;
+}
+.btn:focus {
+	opacity: .75;
+}
+.btn-primary {
+	background: rgba(24, 155, 250, 1);
+	border: 1px solid rgba(24, 155, 250, 1);
+	color: rgba(255, 255, 255, 1);
+}
+.btn-error {
+    background-color: #F24D54;
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid #F24D54;
+}
+.btn-disabled {
+	background: rgba(220, 220, 220, 1);
+    border: 1px solid rgba(220, 220, 220, 1);
+	color: rgba(255, 255, 255, 1);
+}

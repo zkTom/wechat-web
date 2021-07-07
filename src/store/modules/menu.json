@@ -1,0 +1,121 @@
+{
+    "id":1,
+    "parentId": "null",
+    "controller": "",
+    "functionName": "",
+    "name":"鱼小宝管理平台",
+    "type": 0,
+    "iconCode":"el-icon-setting",
+    "creator": "system",
+    "sortIndex":1,
+    "remarks":"菜单根目录",
+    "children":[
+        {
+            "id":2,
+            "parentId": 1,
+            "controller": "/inter_interactive",
+            "functionName": "",
+            "name":"智能互动",
+            "type": 1,
+            "iconCode":"el-icon-setting",
+            "creator": "system",
+            "sortIndex":1,
+            "remarks":"智能互动",
+            "children":[
+                {
+                    "id":3,
+                    "parentId":2,
+                    "controller":"/channel_code",
+                    "functionName": "",
+                    "name":"渠道二维码",
+                    "type":2,
+                    "iconCode":"el-icon-s-custom",
+                    "creator": "system",
+                    "sortIndex":1,
+                    "remarks":"渠道二维码",
+                    "children":[]
+                },
+                {
+                    "id":4,
+                    "parentId":2,
+                    "controller":"/custom_menu",
+                    "functionName": "",
+                    "name":"自定义菜单",
+                    "type":2,
+                    "iconCode":"el-icon-office-building",
+                    "creator": "system",
+                    "sortIndex":2,
+                    "remarks":"自定义菜单",
+                    "children":[]
+                }
+            ]
+        },
+        {
+            "id":5,
+            "parentId":1,
+            "controller":"/fans",
+            "functionName": "",
+            "name":"粉丝管理",
+            "type":1,
+            "iconCode":"el-icon-setting",
+            "creator": "system",
+            "sortIndex":2,
+            "remarks":"系统管理根目录",
+            "children":[
+                {
+                    "id":6,
+                    "parentId":5,
+                    "controller":"/fans_list",
+                    "functionName": "",
+                    "name":"粉丝列表",
+                    "type":2,
+                    "iconCode":"el-icon-setting",
+                    "creator": "system",
+                    "sortIndex":1,
+                    "remarks":"粉丝列表",
+                    "children":[]
+                },
+                {
+                    "id":7,
+                    "parentId":5,
+                    "controller":"/tags_list",
+                    "functionName": "",
+                    "name":"标签管理",
+                    "type":2,
+                    "iconCode":"el-icon-stopwatch",
+                    "creator": "system",
+                    "sortIndex":2,
+                    "remarks":"标签管理",
+                    "children":[]
+                }
+            ]
+        },
+        {
+            "id":8,
+            "parentId":1,
+            "controller":"/offical_account",
+            "functionName": "",
+            "name":"公众号管理",
+            "type":1,
+            "iconCode":"el-icon-setting",
+            "creator": "system",
+            "sortIndex":1,
+            "remarks":"智能互动",
+            "children":[
+                {
+                    "id": 9,
+                    "parentId":8,
+                    "controller":"/offical_account_list",
+                    "functionName": "",
+                    "name":"公众号管理",
+                    "type":2,
+                    "iconCode":"el-icon-s-custom",
+                    "creator": "system",
+                    "sortIndex":1,
+                    "remarks":"公众号管理",
+                    "children":[]
+                }
+            ]
+        }
+    ]
+}

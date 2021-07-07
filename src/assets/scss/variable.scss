@@ -1,0 +1,34 @@
+// 主题变量 用于换肤
+// ---------------------------
+// $--sidebar-background-color: rgb(41,48,56);
+// $--sidebar-text-color: #fff;
+// $--sidebar-active-txt-color: #fff;
+// $--header-background-color: rgb(0,153,204);
+// $--header-text-color: #fff;
+// $--header-active-background-color: rgb(0, 135, 180);
+// $--tags-background-color: #fff;
+// $--tag-active-background-color: rgb(0,153,204);
+// $--tag-text-color: #333;
+// $--tag-active-text-color: #fff;
+// --------------------------
+$--sidebar-background-color: #2B2D31;
+$--sidebar-text-color: #cccccc;
+$--sidebar-active-background-color: #3b74ff;
+$--sidebar-active-txt-color: #ffffff;
+$--header-background-color: #222327;
+$--header-text-color: #fff;
+$--header-active-background-color: #3b74ff;
+$--tags-background-color: #fff;
+$--tag-active-background-color: #3b74ff;
+$--tag-text-color: #333;
+$--tag-active-text-color: #fff;
+// -------------------------------
+// 尺寸设置
+$--header-height: 50px;
+:export {
+    collapseIconColor: $--header-text-color;
+    sidebarTextColor: $--sidebar-text-color;
+    sidebarActiveTextColor: $--sidebar-active-txt-color;
+    sidebarBackgroundColor: $--sidebar-background-color;
+    sidebarActiveBackgroundColor: $--sidebar-active-background-color;
+}
