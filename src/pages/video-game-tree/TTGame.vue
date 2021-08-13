@@ -353,7 +353,6 @@ export default {
         querySearch(queryString, cb) {
             // 调用 callback 返回建议列表的数据
             const clothesList = this.clothesList;
-            console.log(queryString, clothesList);
             if (queryString) {
                 const results = clothesList.filter((item) => item.value.indexOf(queryString) > -1);
                 cb(results);

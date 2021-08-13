@@ -14,6 +14,8 @@
                 <div slot="tip" class="el-upload__tip">只能上传JSON文件</div>
             </el-upload>
             <el-button type="primary" @click="onExportJson">导出JSON</el-button>
+            <el-button type="primary" @click="onImportFromClip">从粘贴板导入</el-button>
+            <el-button type="primary" @click="onExportToClip">复制到粘贴板</el-button>
         </div>
         <div class="page-layout__left">
             <el-tree
@@ -220,8 +222,8 @@ export default {
                 id: { required: true, message: '请填写视频片段ID', trigger: 'change' },
                 name: { required: true, message: '请填写视频片段名称', trigger: 'change' },
                 text: { required: true, message: '请填写视频片段对应的按钮文本描述', trigger: 'change' },
-                url: { validator: validateUrl, trigger: 'blur' },
-                'qustData.text': { required: true, message: '请填写播放结束时的互动标题', trigger: 'change' }
+                url: { validator: validateUrl, trigger: 'blur' }
+                // 'qustData.text': { required: true, message: '请填写播放结束时的互动标题', trigger: 'change' }
             }
         };
     },
@@ -301,6 +303,29 @@ export default {
             } else if (this.action === 'edit') {
                 Object.assign(this.chosenItem, this.menuDetail);
             }
+        },
+        onImportFromClip() {
+            navigator.clipboard.readText()
+            .then((clipText) => {
+                try {
+                    const res = JSON.parse(clipText);
+                    this.treeData.splice(0);
+                    this.treeData.push(res);
+                } catch (error) {
+                    this.$message.error('剪贴板数据错误');                    
+                }
+            }).catch(err => {
+                this.$message.error('没有读取权限')
+            });
+        },
+        onExportToClip() {
+            navigator.clipboard.writeText(newClipText)
+            .then(() => {
+                this.$message.success('写入成功');
+            })
+            .catch(err => {
+                this.$message.error('写入剪贴板失败');
+            })
         },
         handleSuccess(response, file, fileList) {
             console.log('handleSuccess', file);
