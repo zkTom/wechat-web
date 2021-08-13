@@ -319,7 +319,7 @@ export default {
             });
         },
         onExportToClip() {
-            navigator.clipboard.writeText(newClipText)
+            navigator.clipboard.writeText(this.treeData[0])
             .then(() => {
                 this.$message.success('写入成功');
             })
